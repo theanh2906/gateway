@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: backend
+          uri: http://theanh2906.ddns.net:8081
+          predicates:
+            - Path=/**
+          filters:
+            - RewritePath=/backend/(?<segment>.*), /$\{segment}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
