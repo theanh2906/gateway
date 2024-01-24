@@ -1,13 +1,13 @@
+server:
+  port: 8888
 spring:
-  profiles:
-    active: prod
   application:
     name: gateway
   cloud:
     gateway:
       routes:
         - id: backend
-          uri: http://localhost:8081
+          uri: http://theanh2906.ddns.net:8081
           predicates:
             - Path=/backend/**
           filters:
