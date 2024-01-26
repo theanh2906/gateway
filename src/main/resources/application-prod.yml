@@ -18,7 +18,7 @@ spring:
             allowedHeaders: '*'
       routes:
         - id: backend
-          uri: http://theanh2906.ddns.net:8081
+          uri: http://localhost:8081
           predicates:
             - Path=/backend/**
           filters:
