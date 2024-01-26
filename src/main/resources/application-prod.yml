@@ -5,6 +5,12 @@ spring:
     name: gateway
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          '*':
+            allowed-origins: '*'
+            allowed-methods: 'GET, POST, PUT, DELETE'
+            allowed-headers: 'Content-Type, Authorization'
       routes:
         - id: backend
           uri: http://theanh2906.ddns.net:8081
