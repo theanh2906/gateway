@@ -23,6 +23,16 @@ spring:
             - Path=/backend/**
           filters:
             - RewritePath=/backend/(?<segment>.*), /$\{segment}
+          metadata:
+            cors:
+              allowedOrigins: '*'
+              allowedMethods:
+                - GET
+                - POST
+                - DELETE
+                - PUT
+                - OPTIONS
+              allowedHeaders: '*'
 management:
   endpoints:
     web:
