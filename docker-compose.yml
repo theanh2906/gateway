@@ -24,6 +24,9 @@ services:
       - postgres-data:/var/lib/postgresql/data
     network_mode: host
   backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
     image: theanh2906/backend
     container_name: backend
     ports:
